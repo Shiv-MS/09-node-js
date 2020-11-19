@@ -3,7 +3,8 @@ const fs = require("fs")
 const generate_markdown = (data) => {
     let file_markdown = ``;
     Object.keys(data).forEach(key => {
-        file_markdown += `# ${key}
+        file_markdown += `
+        # ${key}
         
         ${Array.isArray(data[key]) ? data[key][0] : data[key]}`
     })

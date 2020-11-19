@@ -1,61 +1,61 @@
 const inq = require('inquirer');
 const file_helper = require("./helpers/write_file")
 
-inq.prompt ([
+inq.prompt([
     {
         type: "input",
-        name: "projectTitle",
+        name: "Project Title",
         message: "Enter A Project Title",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "description",
+        name: "App Description",
         message: "Enter A Description",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "installation",
-        message: "Installation instructions",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        name: "Installation Instructions",
+        message: "Installation Instructions",
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "usage",
+        name: "Usage Instructions",
         message: "Enter Usage Instructions",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "list",
-        name: "license",
+        name: "license Used",
         message: "Choose A License",
-        choices:['The MIT Licesne', 'The GPL License', 'Apache license', 'GNU license', 'N/A'],
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        choices: ['The MIT Licesne', 'The GPL License', 'Apache license', 'GNU license', 'N/A'],
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "contributing",
+        name: "Project Contributors",
         message: "Enter Contributors",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "tests",
+        name: "Tests Implemented",
         message: "Enter Tests Used",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "gitHub",
+        name: "GitHub Username",
         message: "Enter GitHub Username",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
         type: "input",
-        name: "email",
+        name: "Email Address",
         message: "Enter Email Address",
-        validate: (value)=>{if(value){return true} else {return `Must enter in a response to continue`}}
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     }]).then(res => {
         console.log(res);
         file_helper.generate_doc(res)
