@@ -9,6 +9,13 @@ inq.prompt([
         validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
+        type: "list",
+        name: "license Used",
+        message: "Choose A License",
+        choices: ['The MIT Licesne', 'The GPL License', 'Apache license', 'GNU license', 'N/A'],
+        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
+    },
+    {
         type: "input",
         name: "App Description",
         message: "Enter A Description",
@@ -24,13 +31,6 @@ inq.prompt([
         type: "input",
         name: "Usage Instructions",
         message: "Enter Usage Instructions",
-        validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
-    },
-    {
-        type: "list",
-        name: "license Used",
-        message: "Choose A License",
-        choices: ['The MIT Licesne', 'The GPL License', 'Apache license', 'GNU license', 'N/A'],
         validate: (value) => { if (value) { return true } else { return `Must enter in a response to continue` } }
     },
     {
